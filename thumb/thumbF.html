@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThumbB</title>
+
+<link rel="stylesheet" type="text/css" href="dist/css/lightgallery.min.css">
+<link href="dist/css/mod.css" rel="stylesheet">
+
+<style>
+	.demo-gallery {
+		margin-left:130px;
+	}
+	.demo-gallery > ul {
+		margin-bottom: 0;
+	}
+	.demo-gallery > ul > p {
+		float: left;
+		margin-bottom: 15px;
+		margin-right: 20px;
+		width: 200px;
+		height:152px;
+		overflow:hidden;
+	}
+	.demo-gallery > ul > p a {
+		display: block;
+		overflow: hidden;
+		position: relative;
+		float: left;
+	}
+	.demo-gallery > ul > p a > img {
+		-webkit-transition: -webkit-transform 0.15s ease 0s;
+		-moz-transition: -moz-transform 0.15s ease 0s;
+		-o-transition: -o-transform 0.15s ease 0s;
+		transition: transform 0.15s ease 0s;
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+		height: 100%;
+		width: 100%;
+	}
+	.demo-gallery > ul > p a:hover > img {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1);
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+	.demo-gallery > ul > p a:hover .demo-gallery-poster > img {
+		opacity: 1;
+	}
+	.demo-gallery > ul > p a .demo-gallery-poster {
+		background-color: rgba(0, 0, 0, 0.1);
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		-webkit-transition: background-color 0.15s ease 0s;
+		-o-transition: background-color 0.15s ease 0s;
+		transition: background-color 0.15s ease 0s;
+	}
+	.demo-gallery > ul > p a .demo-gallery-poster > img {
+		left: 50%;
+		margin-left: -10px;
+		margin-top: -10px;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		-webkit-transition: opacity 0.3s ease 0s;
+		-o-transition: opacity 0.3s ease 0s;
+		transition: opacity 0.3s ease 0s;
+	}
+	.demo-gallery > ul > p a:hover .demo-gallery-poster {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+</style>
+
+</head>
+<body>
+<header>
+  <h1><a href="../index.html">梦泽</a></h1>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;AaronTempletonYin</p>
+</header>
+
+<div id="nav">
+     <ul>
+       <li><a href="../index_video.html">首页</a></li>
+       <li><a href="../essay.html">文章列表</a>
+       		<ul>
+            	<li><a href="../articals/qianduan/Q.html">前端</a></li>
+                <li><a href="../articals/sheji/S.html">设计</a></li>
+                <li><a href="../articals/jichu/J.html">基础</a></li>
+                <li><a href="../articals/yanjiu/Y.html">研究</a></li>
+                <li><a href="../articals/zhuanye/Z.html">专业</a></li>
+            </ul>
+       </li>
+       <li><a href="../demos.html">个人作品</a></li>
+       <li><a href="../picture.html">我的相册</a></li>
+       <li><a href="../about.html" target="_new">关于作者</a></li>
+       <li><a href="../testing.html">开发区</a></li>
+     </ul>
+</div>
+<script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+
+<div class="demo-gallery">
+	<ul id="lightgallery" class="list-unstyled row">
+    
+    <!--One picture in all-->
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 1.jpg 375, thumbF/F 1.jpg 480, thumbF/F 1.jpg 800" data-src="thumbF/F 1.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 1.jpg" alt="Thumb-1">
+			</a>
+		</p>
+     <!--end one picture-->   
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 2.jpg 375, thumbF/F 2.jpg 480, thumbF/F 2.jpg 800" data-src="thumbF/F 2.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 2.jpg" alt="Thumb-2">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 3.jpg 375, thumbF/F 3.jpg 480, thumbF/F 3.jpg 800" data-src="thumbF/F 3.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 3.jpg" alt="Thumb-3">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 4.jpg 375, thumbF/F 4.jpg 480, thumbF/F 4.jpg 800" data-src="thumbF/F 4.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 4.jpg" alt="Thumb-4">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 5.jpg 375, thumbF/F 5.jpg 480, thumbF/F 5.jpg 800" data-src="thumbF/F 5.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 5.jpg" alt="Thumb-5">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 6.jpg 375, thumbF/F 6.jpg 480, thumbF/F 6.jpg 800" data-src="thumbF/F 6.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 6.jpg" alt="Thumb-6">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 7.jpg 375, thumbF/F 7.jpg 480, thumbF/F 7.jpg 800" data-src="thumbF/F 7.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 7.jpg" alt="Thumb-7">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 8.jpg 375, thumbF/F 8.jpg 480, thumbF/F 8.jpg 800" data-src="thumbF/F 8.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 8.jpg" alt="Thumb-8">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 9.jpg 375, thumbF/F 9.jpg 480, thumbF/F 9.jpg 800" data-src="thumbF/F 9.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 9.jpg" alt="Thumb-9">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 10.jpg 375, thumbF/F 10.jpg 480, thumbF/F 10.jpg 800" data-src="thumbF/F 10.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 10.jpg" alt="Thumb-10">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 11.jpg 375, thumbF/F 11.jpg 480, thumbF/F 11.jpg 800" data-src="thumbF/F 11.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 11.jpg" alt="Thumb-11">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 12.jpg 375, thumbF/F 12.jpg 480, thumbF/F 12.jpg 800" data-src="thumbF/F 12.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 12.jpg" alt="Thumb-12">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 13.jpg 375, thumbF/F 13.jpg 480, thumbF/F 13.jpg 800" data-src="thumbF/F 13.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 13.jpg" alt="Thumb-13">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 14.jpg 375, thumbF/F 14.jpg 480, thumbF/F 14.jpg 800" data-src="thumbF/F 14.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 14.jpg" alt="Thumb-14">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 15.jpg 375, thumbF/F 15.jpg 480, thumbF/F 15.jpg 800" data-src="thumbF/F 15.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 15.jpg" alt="Thumb-15">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 16.jpg 375, thumbF/F 16.jpg 480, thumbF/F 16.jpg 800" data-src="thumbF/F 16.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 16.jpg" alt="Thumb-16">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 17.jpg 375, thumbF/F 17.jpg 480, thumbF/F 17.jpg 800" data-src="thumbF/F 17.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 17.jpg" alt="Thumb-17">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 18.jpg 375, thumbF/F 18.jpg 480, thumbF/F 18.jpg 800" data-src="thumbF/F 18.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 18.jpg" alt="Thumb-18">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 19.jpg 375, thumbF/F 19.jpg 480, thumbF/F 19.jpg 800" data-src="thumbF/F 19.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 19.jpg" alt="Thumb-19">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 20.jpg 375, thumbF/F 20.jpg 480, thumbF/F 20.jpg 800" data-src="thumbF/F 20.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 20.jpg" alt="Thumb-20">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 21.jpg 375, thumbF/F 21.jpg 480, thumbF/F 21.jpg 800" data-src="thumbF/F 21.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 21.jpg" alt="Thumb-21">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 22.jpg 375, thumbF/F 22.jpg 480, thumbF/F 22.jpg 800" data-src="thumbF/F 22.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 22.jpg" alt="Thumb-22">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 23.jpg 375, thumbF/F 23.jpg 480, thumbF/F 23.jpg 800" data-src="thumbF/F 23.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 23.jpg" alt="Thumb-23">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 24.jpg 375, thumbF/F 24.jpg 480, thumbF/F 24.jpg 800" data-src="thumbF/F 24.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 24.jpg" alt="Thumb-24">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 25.jpg 375, thumbF/F 25.jpg 480, thumbF/F 25.jpg 800" data-src="thumbF/F 25.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 25.jpg" alt="Thumb-25">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 26.jpg 375, thumbF/F 26.jpg 480, thumbF/F 26.jpg 800" data-src="thumbF/F 26.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 26.jpg" alt="Thumb-26">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 27.jpg 375, thumbF/F 27.jpg 480, thumbF/F 27.jpg 800" data-src="thumbF/F 27.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 27.jpg" alt="Thumb-27">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 28.jpg 375, thumbF/F 28.jpg 480, thumbF/F 28.jpg 800" data-src="thumbF/F 28.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 28.jpg" alt="Thumb-28">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 29.jpg 375, thumbF/F 29.jpg 480, thumbF/F 29.jpg 800" data-src="thumbF/F 29.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 29.jpg" alt="Thumb-29">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 30.jpg 375, thumbF/F 30.jpg 480, thumbF/F 30.jpg 800" data-src="thumbF/F 30.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 30.jpg" alt="Thumb-30">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 31.jpg 375, thumbF/F 31.jpg 480, thumbF/F 31.jpg 800" data-src="thumbF/F 31.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 31.jpg" alt="Thumb-31">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 32.jpg 375, thumbF/F 32.jpg 480, thumbF/F 32.jpg 800" data-src="thumbF/F 32.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 32.jpg" alt="Thumb-32">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 33.jpg 375, thumbF/F 33.jpg 480, thumbF/F 33.jpg 800" data-src="thumbF/F 33.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 33.jpg" alt="Thumb-33">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 34.jpg 375, thumbF/F 34.jpg 480, thumbF/F 34.jpg 800" data-src="thumbF/F 34.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 34.jpg" alt="Thumb-34">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 35.jpg 375, thumbF/F 35.jpg 480, thumbF/F 35.jpg 800" data-src="thumbF/F 35.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 35.jpg" alt="Thumb-35">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 36.jpg 375, thumbF/F 36.jpg 480, thumbF/F 36.jpg 800" data-src="thumbF/F 36.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 36.jpg" alt="Thumb-36">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 37.jpg 375, thumbF/F 37.jpg 480, thumbF/F 37.jpg 800" data-src="thumbF/F 37.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 37.jpg" alt="Thumb-37">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 38.jpg 375, thumbF/F 38.jpg 480, thumbF/F 38.jpg 800" data-src="thumbF/F 38.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 38.jpg" alt="Thumb-38">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 39.jpg 375, thumbF/F 39.jpg 480, thumbF/F 39.jpg 800" data-src="thumbF/F 39.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 39.jpg" alt="Thumb-39">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 40.jpg 375, thumbF/F 40.jpg 480, thumbF/F 40.jpg 800" data-src="thumbF/F 40.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 40.jpg" alt="Thumb-40">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 41.jpg 375, thumbF/F 41.jpg 480, thumbF/F 41.jpg 800" data-src="thumbF/F 41.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 41.jpg" alt="Thumb-41">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 42.jpg 375, thumbF/F 42.jpg 480, thumbF/F 42.jpg 800" data-src="thumbF/F 42.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 42.jpg" alt="Thumb-42">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 43.jpg 375, thumbF/F 43.jpg 480, thumbF/F 43.jpg 800" data-src="thumbF/F 43.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 43.jpg" alt="Thumb-43">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 44.jpg 375, thumbF/F 44.jpg 480, thumbF/F 44.jpg 800" data-src="thumbF/F 44.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 44.jpg" alt="Thumb-44">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 45.jpg 375, thumbF/F 45.jpg 480, thumbF/F 45.jpg 800" data-src="thumbF/F 45.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 45.jpg" alt="Thumb-45">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 46.jpg 375, thumbF/F 46.jpg 480, thumbF/F 46.jpg 800" data-src="thumbF/F 46.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 46.jpg" alt="Thumb-46">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 47.jpg 375, thumbF/F 47.jpg 480, thumbF/F 47.jpg 800" data-src="thumbF/F 47.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 47.jpg" alt="Thumb-47">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 48.jpg 375, thumbF/F 48.jpg 480, thumbF/F 48.jpg 800" data-src="thumbF/F 48.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 48.jpg" alt="Thumb-48">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 49.jpg 375, thumbF/F 49.jpg 480, thumbF/F 49.jpg 800" data-src="thumbF/F 49.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 49.jpg" alt="Thumb-49">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 50.jpg 375, thumbF/F 50.jpg 480, thumbF/F 50.jpg 800" data-src="thumbF/F 50.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 50.jpg" alt="Thumb-50">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 51.jpg 375, thumbF/F 51.jpg 480, thumbF/F 51.jpg 800" data-src="thumbF/F 51.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 51.jpg" alt="Thumb-51">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 52.jpg 375, thumbF/F 52.jpg 480, thumbF/F 52.jpg 800" data-src="thumbF/F 52.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 52.jpg" alt="Thumb-52">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 53.jpg 375, thumbF/F 53.jpg 480, thumbF/F 53.jpg 800" data-src="thumbF/F 53.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 53.jpg" alt="Thumb-53">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 54.jpg 375, thumbF/F 54.jpg 480, thumbF/F 54.jpg 800" data-src="thumbF/F 54.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 54.jpg" alt="Thumb-54">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 55.jpg 375, thumbF/F 55.jpg 480, thumbF/F 55.jpg 800" data-src="thumbF/F 55.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 55.jpg" alt="Thumb-55">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 56.jpg 375, thumbF/F 56.jpg 480, thumbF/F 56.jpg 800" data-src="thumbF/F 56.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 56.jpg" alt="Thumb-56">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 57.jpg 375, thumbF/F 57.jpg 480, thumbF/F 57.jpg 800" data-src="thumbF/F 57.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 57.jpg" alt="Thumb-57">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 58.jpg 375, thumbF/F 58.jpg 480, thumbF/F 58.jpg 800" data-src="thumbF/F 58.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 58.jpg" alt="Thumb-58">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 59.jpg 375, thumbF/F 59.jpg 480, thumbF/F 59.jpg 800" data-src="thumbF/F 59.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 59.jpg" alt="Thumb-59">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 60.jpg 375, thumbF/F 60.jpg 480, thumbF/F 60.jpg 800" data-src="thumbF/F 60.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 60.jpg" alt="Thumb-60">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 61.jpg 375, thumbF/F 61.jpg 480, thumbF/F 61.jpg 800" data-src="thumbF/F 61.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 61.jpg" alt="Thumb-61">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 62.jpg 375, thumbF/F 62.jpg 480, thumbF/F 62.jpg 800" data-src="thumbF/F 62.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 62.jpg" alt="Thumb-62">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 63.jpg 375, thumbF/F 63.jpg 480, thumbF/F 63.jpg 800" data-src="thumbF/F 63.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 63.jpg" alt="Thumb-63">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 64.jpg 375, thumbF/F 64.jpg 480, thumbF/F 64.jpg 800" data-src="thumbF/F 64.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 64.jpg" alt="Thumb-64">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 65.jpg 375, thumbF/F 65.jpg 480, thumbF/F 65.jpg 800" data-src="thumbF/F 65.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 65.jpg" alt="Thumb-65">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 66.jpg 375, thumbF/F 66.jpg 480, thumbF/F 66.jpg 800" data-src="thumbF/F 66.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 66.jpg" alt="Thumb-66">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 67.jpg 375, thumbF/F 67.jpg 480, thumbF/F 67.jpg 800" data-src="thumbF/F 67.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 67.jpg" alt="Thumb-67">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 68.jpg 375, thumbF/F 68.jpg 480, thumbF/F 68.jpg 800" data-src="thumbF/F 68.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 68.jpg" alt="Thumb-68">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 69.jpg 375, thumbF/F 69.jpg 480, thumbF/F 69.jpg 800" data-src="thumbF/F 69.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 69.jpg" alt="Thumb-69">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 70.jpg 375, thumbF/F 70.jpg 480, thumbF/F 70.jpg 800" data-src="thumbF/F 70.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 70.jpg" alt="Thumb-70">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 71.jpg 375, thumbF/F 71.jpg 480, thumbF/F 71.jpg 800" data-src="thumbF/F 71.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 71.jpg" alt="Thumb-71">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 72.jpg 375, thumbF/F 72.jpg 480, thumbF/F 72.jpg 800" data-src="thumbF/F 72.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 72.jpg" alt="Thumb-72">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 73.jpg 375, thumbF/F 73.jpg 480, thumbF/F 73.jpg 800" data-src="thumbF/F 73.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 73.jpg" alt="Thumb-73">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 74.jpg 375, thumbF/F 74.jpg 480, thumbF/F 74.jpg 800" data-src="thumbF/F 74.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 74.jpg" alt="Thumb-74">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 75.jpg 375, thumbF/F 75.jpg 480, thumbF/F 75.jpg 800" data-src="thumbF/F 75.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 75.jpg" alt="Thumb-75">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 76.jpg 375, thumbF/F 76.jpg 480, thumbF/F 76.jpg 800" data-src="thumbF/F 76.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 76.jpg" alt="Thumb-76">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 77.jpg 375, thumbF/F 77.jpg 480, thumbF/F 77.jpg 800" data-src="thumbF/F 77.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 77.jpg" alt="Thumb-77">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 78.jpg 375, thumbF/F 78.jpg 480, thumbF/F 78.jpg 800" data-src="thumbF/F 78.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 78.jpg" alt="Thumb-78">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 79.jpg 375, thumbF/F 79.jpg 480, thumbF/F 79.jpg 800" data-src="thumbF/F 79.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 79.jpg" alt="Thumb-79">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 80.jpg 375, thumbF/F 80.jpg 480, thumbF/F 80.jpg 800" data-src="thumbF/F 80.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 80.jpg" alt="Thumb-80">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 81.jpg 375, thumbF/F 81.jpg 480, thumbF/F 81.jpg 800" data-src="thumbF/F 81.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 81.jpg" alt="Thumb-81">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 82.jpg 375, thumbF/F 82.jpg 480, thumbF/F 82.jpg 800" data-src="thumbF/F 82.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 82.jpg" alt="Thumb-82">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 83.jpg 375, thumbF/F 83.jpg 480, thumbF/F 83.jpg 800" data-src="thumbF/F 83.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 83.jpg" alt="Thumb-83">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 84.jpg 375, thumbF/F 84.jpg 480, thumbF/F 84.jpg 800" data-src="thumbF/F 84.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 84.jpg" alt="Thumb-84">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 85.jpg 375, thumbF/F 85.jpg 480, thumbF/F 85.jpg 800" data-src="thumbF/F 85.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 85.jpg" alt="Thumb-85">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 86.jpg 375, thumbF/F 86.jpg 480, thumbF/F 86.jpg 800" data-src="thumbF/F 86.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 86.jpg" alt="Thumb-86">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 87.jpg 375, thumbF/F 87.jpg 480, thumbF/F 87.jpg 800" data-src="thumbF/F 87.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 87.jpg" alt="Thumb-87">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 88.jpg 375, thumbF/F 88.jpg 480, thumbF/F 88.jpg 800" data-src="thumbF/F 88.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 88.jpg" alt="Thumb-88">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 89.jpg 375, thumbF/F 89.jpg 480, thumbF/F 89.jpg 800" data-src="thumbF/F 89.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 89.jpg" alt="Thumb-89">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 90.jpg 375, thumbF/F 90.jpg 480, thumbF/F 90.jpg 800" data-src="thumbF/F 90.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 90.jpg" alt="Thumb-90">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 91.jpg 375, thumbF/F 91.jpg 480, thumbF/F 91.jpg 800" data-src="thumbF/F 91.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 91.jpg" alt="Thumb-91">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 92.jpg 375, thumbF/F 92.jpg 480, thumbF/F 92.jpg 800" data-src="thumbF/F 92.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 92.jpg" alt="Thumb-92">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 93.jpg 375, thumbF/F 93.jpg 480, thumbF/F 93.jpg 800" data-src="thumbF/F 93.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 93.jpg" alt="Thumb-93">
+			</a>
+		</p>
+		<p class="col-xs-6 col-sm-4 col-md-3" data-responsive="thumbF/F 94.jpg 375, thumbF/F 94.jpg 480, thumbF/F 94.jpg 800" data-src="thumbF/F 94.jpg" data-sub-html="<h4>Z</h4><p>ZZ</p>" data-pinterest-text="Pin it1">
+			<a href="">
+				<img class="img-responsive" src="thumbF/F 94.jpg" alt="Thumb-94">
+			</a>
+		</p>
+        
+	</ul>
+</div>
+
+<script src="js/picturefill.min.js"></script>
+<script src="dist/js/lightgallery.js"></script>
+<script src="js/lg-pager.js"></script>
+<script src="js/lg-autoplay.js"></script>
+<script src="js/lg-fullscreen.js"></script>
+<script>
+	lightGallery(document.getElementById('lightgallery'));
+</script>
+</body>
+</html>
