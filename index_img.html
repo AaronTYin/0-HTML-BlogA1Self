@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Index</title>
+<link href="css/mod.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+  <h1><a href="index.html">梦泽</a></h1>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;AaronTempletonYin</p>
+</header>
+
+<div id="nav">
+     <ul>
+       <li><a href="index_video.html">首页</a></li>
+       <li><a href="essay.html">文章列表</a>
+       		<ul>
+            	<li><a href="articals/qianduan/Q.html">前端</a></li>
+                <li><a href="articals/sheji/S.html">设计</a></li>
+                <li><a href="articals/jichu/J.html">基础</a></li>
+                <li><a href="articals/yanjiu/Y.html">研究</a></li>
+                <li><a href="articals/zhuanye/Z.html">专业</a></li>
+            </ul>
+       </li>
+       <li><a href="demos.html">个人作品</a></li>
+       <li><a href="picture.html">我的相册</a></li>
+       <li><a href="about.html" target="_new">关于作者</a></li>
+       <li><a href="testing.html">开发区</a></li>
+     </ul>
+</div>
+<script src="js/silder.js"></script>
+
+
+<div id="indeximg">
+<canvas></canvas>
+<script>
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Scene = function () {
+  function Scene() {
+    var _this = this;
+
+    _classCallCheck(this, Scene);
+
+    this.PI = Math.PI;
+    this.TAU = this.PI * 2;
+    this.GOLDEN = (Math.sqrt(5) + 1) / 2;
+    this.canvas = document.querySelector('canvas');
+    this.ctx = this.canvas.getContext('2d');
+    this.dpr = window.devicePixelRatio;
+    this.reset();
+    window.addEventListener('resize', function () {
+      return _this.reset();
+    });
+    this.loop();
+  }
+
+  Scene.prototype.reset = function reset() {
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.hwidth = this.width * 0.5;
+    this.hheight = this.height * 0.5;
+    this.canvas.width = this.width * this.dpr;
+    this.canvas.height = this.height * this.dpr;
+    this.ctx.scale(this.dpr, this.dpr);
+    this.ctx.translate(~ ~this.hwidth, ~ ~this.hheight);
+    this.ctx.globalCompositeOperation = 'lighter';
+    this.tick = 320;
+  };
+
+  Scene.prototype.loop = function loop() {
+    var _this2 = this;
+
+    requestAnimationFrame(function () {
+      return _this2.loop();
+    });
+    this.tick++;
+    this.ctx.clearRect(-this.hwidth, -this.hheight, this.width, this.height);
+    var count = 150;
+    var angle = this.tick * -0.001;
+    var amp = 0;
+    for (var i = 0; i < count; i++) {
+      angle += this.GOLDEN * this.TAU + Math.sin(this.tick * 0.03) * 0.001;
+      amp += (i - count / 2) * 0.01 + Math.cos(this.tick * 0.015) * 1;
+      var x = Math.cos(angle) * amp + Math.cos(this.tick * 0.0075) * (count - i) * 0.3;
+      var y = Math.sin(angle) * amp + Math.sin(this.tick * 0.0075) * (count - i) * 0.3;
+      var radius = 0.1 + i * 0.02;
+      var scale = 0.1 + amp * 0.1;
+      var hue = this.tick + angle / this.TAU * 0.4 + 60;
+      var saturation = 90;
+      var lightness = 60;
+      var alpha = 0.7 + Math.cos(this.tick * 0.03 + i) * 0.3;
+
+      this.ctx.save();
+      this.ctx.translate(x, y);
+      this.ctx.rotate(angle);
+      this.ctx.scale(scale, 1);
+      this.ctx.rotate(this.PI * 0.25);
+      this.ctx.fillStyle = 'hsla(' + hue + ', ' + saturation + '%, ' + lightness + '%, ' + alpha + ')';
+      this.ctx.fillRect(-radius, -radius, radius * 2, radius * 2);
+      this.ctx.restore();
+
+      this.ctx.beginPath();
+      this.ctx.arc(x, y, radius * 12, 0, this.TAU);
+      this.ctx.fillStyle = 'hsla(' + hue + ', ' + saturation + '%, ' + lightness + '%, ' + alpha * 0.05 + ')';
+      this.ctx.fill();
+    }
+  };
+
+  return Scene;
+}();
+var scene = new Scene();
+</script>
+</div>
+<div id="indextext">
+	<p>Welcome!</p>
+</div>
+
+
+
+</body>
+</html>
