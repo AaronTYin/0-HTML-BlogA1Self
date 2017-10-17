@@ -2,8 +2,9 @@
 /* CSS Document */
 
 .main-container {
-  margin: 12em auto 0 auto;
-  width: 650px;
+  margin-top: 12em;
+  text-align:center;
+  width: 100%;
 }
 .coverflow-container {
   box-reflect: below 0px -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1) 100%);

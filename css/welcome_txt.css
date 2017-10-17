@@ -277,7 +277,7 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -40px;
+  margin-left: -5%;
   margin-top: 200px;
   z-index:1;
 }
@@ -308,25 +308,15 @@ body{
   height: 20px;
   width: 16px;
   background: #eaf7ff;
-  -moz-animation: blink 12.4s 1;
-  -webkit-animation: blink 12.4s 1;
-  animation: blink 12.4s 1;
+  -moz-animation: blink 18s 1;
+  -webkit-animation: blink 18s 1;
+  animation: blink 18s 1;
   opacity: 0;
 }
 .loading span.title {
-  -moz-animation: title 3.3s linear 3s 1;
-  -webkit-animation: title 3.3s linear 3s 1;
-  animation: title 3.3s linear 3s 1;  /*前为持续时间，后为延迟时间*/
+  -moz-animation: title 16s linear 0s 1;
+  -webkit-animation: title 16s linear 0s 1;
+  animation: title 16s linear 0s 1;  /*前为持续时间，后为延迟时间*/
   opacity: 0;/*播放后不再显示*/
 }
-.welcome{
-	background:#FFF;
-	font-size:72px;
-	text-align:center;
-	color:#FFF;
-	z-index:2;
-	position:absolute;
-	width:200px;
-	height:200px;
-	margin-top:-2000px;
-}
+
