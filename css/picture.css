@@ -4,7 +4,7 @@
 .main-container {
   margin-top: 12em;
   text-align:center;
-  width: 100%;
+  width: 82%;
 }
 .coverflow-container {
   box-reflect: below 0px -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.1) 100%);
