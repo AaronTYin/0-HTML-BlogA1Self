@@ -1,4 +1,4 @@
-# 0-HTML-BlogA1Self
+# O-HTML-MZBlogA1
 
 >这是在刚开始学前端时用GithubPages做的第一个博客模型，具体效果请见[【O】MengZe初代博客A1](https://mengze.top/[O]MengZe初代博客A1/)。
 
