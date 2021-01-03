@@ -1,6 +1,6 @@
 # O-HTML-MZBlogA1
 
->这是在刚开始学前端时用GithubPages做的第一个博客模型，具体效果请见[【O】MengZe初代博客A1](https://mengze.top/[O]MengZe初代博客A1/)。
+>这是在刚开始学前端时用GithubPages做的第一个博客模型，具体效果请见[O_MengZe初代博客A1](https://mengze.top/O_MengZe初代博客A1/)。
 
 >有些模块的代码是借鉴的网上的，但基本上都做了很大程度的修改或重汇。
 
